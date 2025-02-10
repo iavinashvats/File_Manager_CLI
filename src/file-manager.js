@@ -41,10 +41,10 @@ async function menu(){
             console.log(chalk.green("✅ File Created"));
             break;
         case "3":
-            const filePath2 = await rl.question(chalk.cyan("File Path: "));
-            const content = await rl.question(chalk.cyan("Content: "));
-            await writeToFile(filePath2, content);
-            console.log(chalk.green("✅ File Updated"));
+            const appendFilePath = await rl.question(chalk.cyan("File Path: "));
+            const appendContent = await rl.question(chalk.cyan("Content: "));
+            await writeToFile(appendFilePath, appendContent);
+            console.log(chalk.green("✅ File Content Added"));
             break;
         case "4":
 
