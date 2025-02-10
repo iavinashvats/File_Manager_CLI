@@ -1,7 +1,7 @@
 # Simple File Manager CLI In Node.js
 
     - While Learning Node.js Basics I try to make a file structure or file manager in Node.js 
-    - Learning basic nitty-gritty of Node.js like:- fs, modules, process, etc.
+    - Learning basic nitty-gritty of Node.js like:- fs, http, streams, process & more!
 
 # 📁 File manager properties are the following:
 
