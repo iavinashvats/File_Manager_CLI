@@ -1,7 +1,19 @@
 import * as fs from "node:fs/promises"
+import path from "node:path";
+
+export async function listItems(listPath = "./"){
+    const items = await fs.readdir(listPath, {withFileTypes:true});
+    return items.map((item) =>{
+        return {
+            name: item.name,
+            type: item.isDirectory() ? "folder" : "file",
+            path: path.join(import.meta.dirname, item.name), 
+        };
+    });
+}
 
 export async function createFile(pathname, content = " ") {
-        await fs.writeFile(pathname, content);
+    await fs.writeFile(pathname, content);
 }
 
 export async function createFolder(folderName) {
